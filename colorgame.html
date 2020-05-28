@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Color Game</title>
+</head>
+<body>
+    <div id="header">
+        <h1>The Great Color Game</h1>
+        <h2>Can you guess which one is</h2>
+        <span id="colorDisplay"></span>
+    </div>
+    <div id="navigation">
+        <div id="newColOrPlayAgain" class="navigationOption">New Color Set</div>
+        <div id="result" class="navigationOption"></div>
+        <div class="navigationOption" id="difficultyContainer">
+            <div id="easyLevel">Easy</div>
+            <div id="hardLevel" class="chosenDifficulty">Hard</div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="square easySquare"></div>
+        <div class="square easySquare"></div>
+        <div class="square easySquare"></div>
+        <div class="square specialSquare"></div>
+        <div class="square specialSquare"></div>
+        <div class="square specialSquare"></div>
+    </div>
+</body>
+<script src="colorgame.js"></script>
+</html>

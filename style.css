@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", "Avenir";
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+body {
+    background-color: #2f2f2f;
+}
+
+#header {
+    height: 150px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color: #2f2f2f;
+    text-align: center;
+    color: white;
+
+}
+
+#header h1 {
+    text-transform: uppercase;
+}
+
+#header h2 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#header span {
+    font-weight: 800;
+    font-size: 35px;
+}
+
+#navigation {
+    height: 35px;
+    margin: 0px 20%;
+    display: flex;
+    justify-content: space-evenly;
+    color: whitesmoke;
+}
+
+.navigationOption {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+#newColOrPlayAgain {
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}
+
+#difficultyContainer {
+    padding: 0px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+#easyLevel, #hardLevel {
+    margin: 0px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+}
+
+#container {
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.square {
+    float: left;
+    width: 30%;
+    padding-bottom: 30%;
+    margin: 1.6%;
+    border-radius: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.chosenDifficulty {
+    background-color: white;
+    font-weight: 700;
+    color: #2f2f2f;
+}
