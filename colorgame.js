@@ -16,17 +16,14 @@ let hardLevel = document.getElementById("hardLevel");
 let result = document.getElementById("result");
 let goalColor = colors[Math.floor(Math.random() * 5 + 1)];
 
-easyLevel.addEventListener("click", easyGame);
-hardLevel.addEventListener("click", hardGame);
-
-// displays the color to guess
-colorDisplay.textContent = goalColor;
-
 // reset button only refreshes the page
 newColOrPlayAgain.addEventListener("click", function () {
     location.reload();
 });
 
+easyLevel.addEventListener("click", easyGame);
+hardLevel.addEventListener("click", hardGame);
+colorDisplay.textContent = goalColor;
 hardGame();
 
 function hardGame() {
