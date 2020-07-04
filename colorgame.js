@@ -1,6 +1,14 @@
 // KNOW BUGS
 // initial, switched to easy, then hard bug on the swtich difficulty colors
 
+const music = new Howl({
+    src: ['./background.mp3'],
+    autoplay: true,
+    loop: true,
+    volume: 0.5,
+});
+
+music.play();
 
 let colors = generateColor();
 let header = document.getElementById("header");
@@ -49,7 +57,7 @@ function generateColor() {
     }
     return colors;
  };
- 
+
 
 // LOGIC: changes bg when correct
 const changeBg = (color, arr) => {
@@ -140,4 +148,3 @@ function easyGame() {
         });
     }
 }
-          
