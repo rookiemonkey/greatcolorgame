@@ -27,12 +27,7 @@ newColOrPlayAgain.addEventListener("click", function () {
     location.reload();
 });
 
-// LOGIC: changes bg when correct
-const changeBg = (color, arr) => {
-    for (let i = 0; i <= arr.length - 1; i++) {
-        squares[i].style.backgroundColor = color;
-    }
-};
+hardGame();
 
 function hardGame() {
     switchDifficulty('Hard');
@@ -45,31 +40,10 @@ function hardGame() {
     for (let i = 0; i <= squares.length - 1; i++) {
         squares[i].style.backgroundColor = colors[i];
         squares[i].addEventListener('click', function () {
-            let bgColor = this.style.backgroundColor;
-            if (bgColor !== goalColor) {
-                result.textContent = "Please try again"
-                this.style.backgroundColor = "#2f2f2f";
-            } else {
-                changeBg(goalColor, squares); // calls this function
-                header.style.backgroundColor = goalColor;
-                difficultyContainer.style.borderColor = goalColor;
-                easyLevel.style.borderColor = goalColor;
-                easyLevel.style.color = goalColor;
-                hardLevel.style.borderColor = goalColor;
-                hardLevel.style.backgroundColor = goalColor;
-                result.textContent = "Correct!";
-                newColOrPlayAgain.style.borderColor = goalColor;
-                newColOrPlayAgain.style.color = goalColor;
-                newColOrPlayAgain.style.borderWidth = "3px";
-                newColOrPlayAgain.textContent = "Play Again?"
-                easyLevel.removeEventListener("click", easyGame);
-                hardLevel.removeEventListener("click", hardGame);
-            }
-        })
+            checkAnswer(this, goalColor, squares, 'Hard')
+        });
     }
 };
-
-hardGame(); // calls the whole game loop
 
 function easyGame() {
     switchDifficulty('Easy');
@@ -84,18 +58,7 @@ function easyGame() {
     for (let i = 0; i <= easySquares.length - 1; i++) {
         easySquares[i].style.backgroundColor = colors[i];
         easySquares[i].addEventListener('click', function () {
-            let bgColor = this.style.backgroundColor;
-            if (bgColor !== goalColor) {
-                result.textContent = "Please try again"
-                this.style.backgroundColor = "#2f2f2f";
-            } else {
-                easyLevel.style.backgroundColor = goalColor;
-                easyLevel.style.color = "#2f2f2f";
-                hardLevel.style.backgroundColor = "transparent"
-                hardLevel.style.color = goalColor;
-                easyLevel.removeEventListener("click", easyGame);
-                hardLevel.removeEventListener("click", hardGame);
-            }
+            checkAnswer(this, goalColor, easySquares, 'Easy')
         });
     }
 }
