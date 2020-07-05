@@ -2,6 +2,7 @@ const alertCorrect = (diff, goal, sqrs) => {
     switch (diff) {
         case 'Hard':
             result.textContent = "Correct!";
+            question.style.display = 'none';
             setBackground(goal, sqrs);
             header.style.backgroundColor = goal;
             difficultyContainer.style.borderColor = goal;
@@ -18,6 +19,7 @@ const alertCorrect = (diff, goal, sqrs) => {
             break;
         case 'Easy':
             result.textContent = "Correct!";
+            question.style.display = 'none';
             setBackground(goal, sqrs);
             easyLevel.style.backgroundColor = goal;
             easyLevel.style.color = "#2f2f2f";

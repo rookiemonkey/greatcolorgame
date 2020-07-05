@@ -7,6 +7,7 @@ new Howl({
 
 let colors = setColor(6);
 let header = document.getElementById("header");
+let question = document.querySelector('h2');
 let squares = document.querySelectorAll(".square");
 let colorDisplay = document.getElementById("colorDisplay");
 let newColOrPlayAgain = document.getElementById("newColOrPlayAgain");
