@@ -6,6 +6,7 @@ const alertCorrect = (diff, goal, sqrs) => {
             setBackground(goal, sqrs);
             header.style.backgroundColor = goal;
             difficultyContainer.style.borderColor = goal;
+            difficultyContainer.style.borderWidth = '3px';
             easyLevel.style.borderColor = goal;
             easyLevel.style.color = goal;
             hardLevel.style.borderColor = goal;

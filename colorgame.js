@@ -17,9 +17,26 @@ let hardLevel = document.getElementById("hardLevel");
 let result = document.getElementById("result");
 let goalColor = colors[Math.floor(Math.random() * 5 + 1)];
 
-// reset button only refreshes the page
 newColOrPlayAgain.addEventListener("click", function () {
-    location.reload();
+
+    // from a hard game
+    function reset() {
+        difficultyContainer.style.borderColor = 'whitesmoke';
+        difficultyContainer.style.borderWidth = '0px';
+        easyLevel.style.borderColor = 'whitesmoke';
+        easyLevel.style.color = 'whitesmoke';
+        hardLevel.style.borderColor = 'whitesmoke';
+        hardLevel.style.backgroundColor = 'whitesmoke';
+        newColOrPlayAgain.style.borderColor = 'whitesmoke';
+        newColOrPlayAgain.style.color = 'whitesmoke';
+        newColOrPlayAgain.style.borderWidth = "1px";
+        newColOrPlayAgain.textContent = "New Color Set"
+        header.style.backgroundColor = '#2f2f2f';
+        result.textContent = '';
+        hardGame();
+    }
+
+    reset();
 });
 
 easyLevel.addEventListener("click", easyGame);
