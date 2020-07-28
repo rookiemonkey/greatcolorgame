@@ -1,10 +1,8 @@
 function resetHard() {
     difficultyContainer.style.borderColor = 'whitesmoke';
     difficultyContainer.style.borderWidth = '0px';
-    easyLevel.style.borderColor = 'whitesmoke';
-    easyLevel.style.color = 'whitesmoke';
-    hardLevel.style.borderColor = 'whitesmoke';
-    hardLevel.style.backgroundColor = 'whitesmoke';
+    hardLevel.classList.add("chosenDifficulty");
+    easyLevel.classList.remove("chosenDifficulty");
     newColOrPlayAgain.style.borderColor = 'whitesmoke';
     newColOrPlayAgain.style.color = 'whitesmoke';
     newColOrPlayAgain.style.borderWidth = "1px";
