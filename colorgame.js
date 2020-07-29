@@ -11,7 +11,7 @@ let question = document.querySelector('h2');
 let squares = document.querySelectorAll(".square");
 let colorDisplay = document.getElementById("colorDisplay");
 let newColOrPlayAgain = document.getElementById("newColOrPlayAgain");
-let difficultyContainer = document.getElementById("difficultyContainer");
+let difficulty = document.getElementById("difficulty");
 let result = document.getElementById("result");
 let goalColor = colors[Math.floor(Math.random() * 5 + 1)];
 
@@ -20,10 +20,19 @@ newColOrPlayAgain.addEventListener("click", function () {
 });
 
 colorDisplay.textContent = goalColor;
+difficulty.addEventListener('click', () => {
+    if (difficulty.textContent === 'Hard') {
+        difficulty.textContent = 'Easy'
+        easyGame();
+    }
+    else {
+        difficulty.textContent = 'Hard'
+        hardGame();
+    }
+})
 hardGame();
 
 function hardGame() {
-    switchDifficulty('Hard');
     setSpecialBoxes("Block");
     colors = setColor(6);
     goalColor = colors[Math.floor(Math.random() * 5 + 1)]
@@ -39,7 +48,6 @@ function hardGame() {
 };
 
 function easyGame() {
-    switchDifficulty('Easy');
     setSpecialBoxes("none");
     colors = setColor(3);
     goalColor = colors[Math.floor(Math.random() * 4) - 1];
