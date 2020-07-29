@@ -15,11 +15,8 @@ let difficulty = document.getElementById("difficulty");
 let result = document.getElementById("result");
 let goalColor = colors[Math.floor(Math.random() * 5 + 1)];
 
-newColOrPlayAgain.addEventListener("click", () => {
-    resetHard();
-});
-
 colorDisplay.textContent = goalColor;
+newColOrPlayAgain.addEventListener("click", resetGame)
 difficulty.addEventListener('click', setGame)
 hardGame();
 
