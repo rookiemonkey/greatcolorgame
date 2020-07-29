@@ -39,7 +39,7 @@ body {
     height: 35px;
     margin: 0px 20%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     color: whitesmoke;
 }
 
@@ -49,18 +49,19 @@ body {
     padding: 5px;
 }
 
-#newColOrPlayAgain {
+#result, #newColOrPlayAgain, #difficultyContainer {
+    width: 150px;
+    justify-content: center;
+}
+
+#newColOrPlayAgain, #difficultyContainer {
     border-width: 1px;
     border-style: solid;
     border-color: white;
 }
 
 #difficultyContainer {
-    margin: 0px;
     padding: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
 }   
 
 #container {
