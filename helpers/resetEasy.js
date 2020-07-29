@@ -9,6 +9,6 @@ function resetEasy() {
     newColOrPlayAgain.textContent = "New Color Set"
     header.style.backgroundColor = '#2f2f2f';
     result.textContent = '';
-    difficulty.addEventListener('click', setGame)
+    difficultyContainer.addEventListener('click', setGame)
     easyGame();
 }

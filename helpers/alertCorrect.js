@@ -12,7 +12,7 @@ const alertCorrect = (diff, goal, sqrs) => {
             newColOrPlayAgain.style.color = goal;
             newColOrPlayAgain.style.borderWidth = "3px";
             newColOrPlayAgain.textContent = "Play Again?"
-            difficulty.removeEventListener('click', setGame, false)
+            difficultyContainer.removeEventListener('click', setGame, false)
             break;
         case 'Easy':
             result.textContent = "Correct!";
@@ -25,7 +25,7 @@ const alertCorrect = (diff, goal, sqrs) => {
             newColOrPlayAgain.style.color = goal;
             newColOrPlayAgain.style.borderWidth = "3px";
             newColOrPlayAgain.textContent = "Play Again?"
-            difficulty.removeEventListener('click', setGame, false)
+            difficultyContainer.removeEventListener('click', setGame, false)
             break;
 
         default: return new Error("Missing Parameter")
