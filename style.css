@@ -56,19 +56,12 @@ body {
 }
 
 #difficultyContainer {
-    padding: 0px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: transparent;
-}
-
-#easyLevel, #hardLevel {
     margin: 0px;
     padding: 5px;
     border-width: 1px;
     border-style: solid;
     border-color: white;
-}
+}   
 
 #container {
     max-width: 600px;
