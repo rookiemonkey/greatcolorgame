@@ -12,8 +12,6 @@ let squares = document.querySelectorAll(".square");
 let colorDisplay = document.getElementById("colorDisplay");
 let newColOrPlayAgain = document.getElementById("newColOrPlayAgain");
 let difficultyContainer = document.getElementById("difficultyContainer");
-let easyLevel = document.getElementById("easyLevel");
-let hardLevel = document.getElementById("hardLevel");
 let result = document.getElementById("result");
 let goalColor = colors[Math.floor(Math.random() * 5 + 1)];
 
@@ -21,8 +19,6 @@ newColOrPlayAgain.addEventListener("click", function () {
     resetHard();
 });
 
-easyLevel.addEventListener("click", easyGame);
-hardLevel.addEventListener("click", hardGame);
 colorDisplay.textContent = goalColor;
 hardGame();
 
