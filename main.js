@@ -1,5 +1,5 @@
 new Howl({
-    src: ['./background.mp3'],
+    src: ['./assets/sounds/background.mp3'],
     autoplay: true,
     loop: true,
     volume: 0.5,
