@@ -1,4 +1,9 @@
 const alertCorrect = (diff, goal, sqrs) => {
+    const body = document.body;
+
+    // add the alert animation and restBtn click listener
+    body.addEventListener('click', handleAlertClick, true)
+
     switch (diff) {
         case 'Hard':
             result.textContent = "Correct!";
