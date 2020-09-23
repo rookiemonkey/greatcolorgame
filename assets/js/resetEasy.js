@@ -1,4 +1,5 @@
 function resetEasy() {
+    question.style.display = 'block';
     difficulty.textContent = 'Easy'
     difficultyContainer.style.borderColor = 'whitesmoke';
     difficultyContainer.style.borderWidth = '1px';

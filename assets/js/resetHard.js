@@ -1,4 +1,5 @@
 function resetHard() {
+    question.style.display = 'block';
     difficulty.textContent = 'Hard'
     difficultyContainer.style.borderColor = 'whitesmoke';
     difficultyContainer.style.borderWidth = '1px';
