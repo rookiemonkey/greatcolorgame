@@ -71,8 +71,9 @@ body {
 }   
 
 #container {
+    margin-top: 50px !important;
     max-width: 600px;
-    margin: 0px auto;
+    margin: auto;
 }
 
 .square {
@@ -92,6 +93,8 @@ body {
     font-weight: 700;
     color: #2f2f2f;
 }
+
+
 
 @keyframes shakeX {
   from,
@@ -119,4 +122,26 @@ body {
   animation-name: shakeX;
   animation-duration: 1000ms;
   animation-timing-function: ease-in-out;
+}
+
+@media only screen and (max-width: 515px) {
+    h1 {
+        font-size: medium;
+    }
+
+    div#navigation {
+        margin-top: 10px;
+    }
+
+    div#newColOrPlayAgain,
+    div#difficulty {
+        font-size: xx-small !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    div#newColOrPlayAgain,
+    div#difficulty {
+        font-size: smaller;
+    }
 }
